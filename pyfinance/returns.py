@@ -140,7 +140,7 @@ class TSeries(pd.Series):
             n = len(self) / utils.get_anlz_factor(freq)
         return nanprod(self.ret_rels()) ** (1.0 / n) - 1.0
 
-    def anlzd_stdev(self, ddof=0, freq=None, **kwargs):
+    def anlzd_stdev(self, ddof=0, freq=250, **kwargs):
         """Annualized standard deviation with `ddof` degrees of freedom.
 
         Parameters
@@ -844,7 +844,7 @@ class TSeries(pd.Series):
         """
         return self.CAPM(benchmark, **kwargs).rsq_adj
 
-    def semi_stdev(self, threshold=0.0, ddof=0, freq=None):
+    def semi_stdev(self, threshold=0.0, ddof=0, freq=250):
         """Semi-standard deviation; stdev of downside returns.
 
         It is designed to address that fact that plain standard

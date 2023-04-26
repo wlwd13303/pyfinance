@@ -15,7 +15,7 @@ setup(
     description='Python package designed for security returns analysis.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version='1.3.0',
+    version='1.3.1',
     author='Brad Solomon',
     author_email='bsolomon@protonmail.com',
     url='https://github.com/bsolomon1124/pyfinance',
@@ -34,8 +34,8 @@ setup(
         'xlrd',
         'xmltodict'
         ],
-    setup_requires=['pytest-runner'],
-    tests_require=['pytest'],
+    setup_requires=[],
+    tests_require=[],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
